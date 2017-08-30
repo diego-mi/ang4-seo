@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prestart": "ng build --prod && ngc",
+    "prestart": "ng build --prod --base-href https://angseo.herokuapp.com/",
     "start": "ts-node src/server.ts"
   },
   "private": true,
+  "engines": {
+    "node": "6.11.1"
+  },
   "dependencies": {
     "@angular/animations": "^4.3.6",
     "@angular/common": "^4.2.4",
