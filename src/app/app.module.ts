@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
+import {PostModule} from './post/post.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { AboutComponent } from './about/about.component';
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'ang4-seo'}),
-    AppRoutingModule
+    AppRoutingModule,
+    PostModule
   ],
   providers: [],
   bootstrap: [AppComponent]
