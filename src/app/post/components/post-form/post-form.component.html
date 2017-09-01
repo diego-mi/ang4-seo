@@ -1,3 +1,14 @@
-<p>
-  post-form works!
-</p>
+<h2>Add Post</h2>
+<div class="form">
+  <div>
+    <label for="post-title">Title</label>
+    <input [(ngModel)]="post.title" id="post-title" placeholder="title">
+  </div>
+  <div>
+    <label for="post-description">Description</label>
+    <textarea [(ngModel)]="post.description" id="post-description" cols="30" rows="10"></textarea>
+  </div>
+  <div>
+    <button (click)="add()">Save</button>
+  </div>
+</div>

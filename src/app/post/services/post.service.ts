@@ -21,6 +21,14 @@ export class PostService {
       .catch(this.handleError);
   }
 
+  create(post: Post): Promise<Post> {
+    return this.http
+      .post(this.postsUrl, JSON.stringify(post), {headers: this.headers})
+      .toPromise()
+      .then(response =>  response.json())
+      .catch(this.handleError);
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
