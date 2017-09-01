@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prestart": "ng build --prod --base-href https://angseo.herokuapp.com/",
+    "prestart": "ng build --prod && ngc",
     "start": "ts-node src/server.ts"
   },
   "private": true,
