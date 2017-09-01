@@ -7,9 +7,6 @@
     "start": "ts-node src/server.ts"
   },
   "private": true,
-  "engines": {
-    "node": "6.11.1"
-  },
   "dependencies": {
     "@angular/animations": "^4.3.6",
     "@angular/common": "^4.2.4",
