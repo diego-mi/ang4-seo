@@ -21,6 +21,13 @@ export class PostService {
       .catch(this.handleError);
   }
 
+  getPost(id: string): Promise<Post> {
+    return this.http.get(this.postsUrl + '/' + id)
+      .toPromise()
+      .then(response =>  response.json())
+      .catch(this.handleError);
+  }
+
   create(post: Post): Promise<Post> {
     return this.http
       .post(this.postsUrl, JSON.stringify(post), {headers: this.headers})

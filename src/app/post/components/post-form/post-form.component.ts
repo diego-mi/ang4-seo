@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Meta, Title} from '@angular/platform-browser';
 import {Post} from '../../models/post';
 import {PostService} from '../../services/post.service';
 
@@ -9,15 +10,29 @@ import {PostService} from '../../services/post.service';
 })
 export class PostFormComponent implements OnInit {
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, meta: Meta, title: Title) {
+    title.setTitle('My Spiffy Home Page');
+
+    meta.addTags([
+      {
+        name: 'author', content: 'Coursetro.com'
+      },
+      {
+        name: 'keywords', content: 'angular 4 tutorial, angular seo'
+      },
+      {
+        name: 'description', content: 'This is my great description.'
+      },
+    ]);
+  }
 
   @Input() post: Post;
 
   ngOnInit() {
     this.post = new Post();
 
-    this.post.title = '1';
-    this.post.description = '2';
+    this.post.title = '';
+    this.post.description = '';
   }
 
   add(): void {
