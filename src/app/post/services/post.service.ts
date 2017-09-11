@@ -9,7 +9,7 @@ import {Post} from '../models/post';
 export class PostService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private postsUrl = 'http://localhost:3000/api/posts';
+  private postsUrl = 'http://ec2-34-204-53-170.compute-1.amazonaws.com:3000/api/posts';
 
   constructor(private http: Http) {
   }

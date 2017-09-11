@@ -38,7 +38,5 @@ export class PostDetailComponent implements OnInit {
           },
         ]);
       });
-
-
   }
 }
